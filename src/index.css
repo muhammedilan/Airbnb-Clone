@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Circular;
+  font-weight: 300;
+  src: url("assets/fonts/Airbnb_Cereal-Light.otf") format("opentype"),
+    url("assets/fonts/Airbnb_Cereal-Light.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  unicode-range: U+0000-03FF, U+0500-058F, U+0700-074F, U+0780-FAFF, U+FE00-FE6F,
+    U+FF00-EFFFF, U+FFFFE-10FFFF;
+  font-weight: normal;
+  font-style: normal;
+  src: url("assets/fonts/Airbnb_Cereal-Book.otf") format("opentype"),
+    url("assets/fonts/Airbnb_Cereal-Book.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  unicode-range: U+0000-03FF, U+0500-058F, U+0700-074F, U+0780-FAFF, U+FE00-FE6F,
+    U+FF00-EFFFF, U+FFFFE-10FFFF;
+  font-weight: 500;
+  font-style: normal;
+  src: url("assets/fonts/Airbnb_Cereal-Book.otf") format("opentype"),
+    url("assets/fonts/Airbnb_Cereal-Book.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  unicode-range: U+0000-03FF, U+0500-058F, U+0700-074F, U+0780-FAFF, U+FE00-FE6F,
+    U+FF00-EFFFF, U+FFFFE-10FFFF;
+  font-weight: 700;
+  font-style: normal;
+  src: url("assets/fonts/Airbnb_Cereal-Bold.otf") format("opentype"),
+    url("assets/fonts/Airbnb_Cereal-Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  font-weight: normal;
+  font-style: normal;
+  src: url("assets/fonts/Airbnb_Cereal-Book.otf") format("opentype"),
+    url("assets/fonts/Airbnb_Cereal-Book.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  font-weight: 600;
+  font-style: normal;
+  src: url("assets/fonts/Airbnb_Cereal-Medium.otf") format("opentype"),
+    url("assets/fonts/Airbnb_Cereal-Medium.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  font-weight: 700;
+  font-style: normal;
+  src: url("assets/fonts/Airbnb_Cereal-Bold.otf") format("opentype"),
+    url("assets/fonts/Airbnb_Cereal-Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+body {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 0.875rem;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.padding-container {
+  @apply px-10 xl:px-20;
+}
