@@ -22,6 +22,9 @@ module.exports = {
       transitionDuration: {
         400: "400ms",
       },
+      boxShadow:{
+        "hover":"0px 2px 4px rgba(0,0,0,0.18)"
+      }
     },
   },
   plugins: [],

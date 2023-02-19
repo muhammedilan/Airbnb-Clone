@@ -80,5 +80,5 @@ body {
 }
 
 .padding-container {
-  @apply px-10 xl:px-20;
+  @apply px-10 2xl:px-20;
 }
