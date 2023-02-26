@@ -3,10 +3,10 @@ import Header from "./Header";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className="overflow-hidden min-h-screen">
       <Header />
-      <main className="grow">{children}</main>
-    </>
+      <main className="grow padding-container">{children}</main>
+    </div>
   );
 };
 

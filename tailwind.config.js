@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         primary: "#FF385C",
         "dark-grey": "#222",
+        "light-grey": "#ddd",
       },
       screens: {
         sm: "550px",
@@ -22,9 +23,9 @@ module.exports = {
       transitionDuration: {
         400: "400ms",
       },
-      boxShadow:{
-        "hover":"0px 2px 4px rgba(0,0,0,0.18)"
-      }
+      boxShadow: {
+        hover: "0px 2px 4px rgba(0,0,0,0.18)",
+      },
     },
   },
   plugins: [],
