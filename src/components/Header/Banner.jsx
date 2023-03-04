@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import close from "../../assets/svgs/close.svg";
 
 const Banner = () => {
   const [open, setOpen] = useState(false);
-
   function toggleOpen() {
     setOpen(!open);
   }
 
   return (
-    <div className="hidden md:block bg-[#f7f7f7] shadow-[inset_0px_-1px_0px_rgba(0,0,0,0.06)] relative z-20 padding-container">
+    <div className="hidden md:block bg-[#f7f7f7] shadow-[inset_0px_-1px_0px_rgba(0,0,0,0.06)] relative z-30 padding-container">
       <div className="h-16 flex items-center justify-center text-center text-[1rem] font-semibold">
         Toplam fiyatı önceden göster
         <button
@@ -77,4 +76,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default memo(Banner);

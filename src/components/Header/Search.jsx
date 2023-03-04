@@ -32,11 +32,12 @@ const Search = ({ openSearchDropdown, setOpenSearchDropdown }) => {
       className:"w-[50%]"
     },
   ];
+
   return (
     <>
       <div
         onClick={() => setOpenSearchDropdown(true)}
-        className="min-w-[300px] max-w-fit flex mx-6 items-center z-10"
+        className="min-w-[300px] max-w-fit flex mx-6 items-center z-20"
       >
         <div
           open={openSearchDropdown}
@@ -97,7 +98,7 @@ const Search = ({ openSearchDropdown, setOpenSearchDropdown }) => {
                       <input
                         type="text"
                         placeholder={button.text}
-                        className="outline-none"
+                        className="w-full outline-none"
                       />
                     ) : (
                       <div className="text-[#717171] font-thin whitespace-nowrap text-ellipsis overflow-hidden">
@@ -121,7 +122,7 @@ const Search = ({ openSearchDropdown, setOpenSearchDropdown }) => {
       {openSearchDropdown && (
         <div
           onClick={() => setOpenSearchDropdown(false)}
-          className="w-screen h-screen fixed bg-black bg-opacity-[.25] top-0 left-0"
+          className="w-screen h-screen fixed bg-black bg-opacity-[.25] top-0 left-0 z-10"
         />
       )}
     </>

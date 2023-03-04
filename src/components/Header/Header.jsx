@@ -34,7 +34,7 @@ const Header = () => {
 
       <header
         className={
-          `h-20 hidden md:flex items-center justify-between padding-container relative after:w-full after:h-full after:[transition:transform_150ms_ease,opacity_150ms_ease_75ms] after:bg-white after:absolute after:left-0 after:top-0 after:origin-[50%_0%] ` +
+          `h-20 hidden md:flex items-center justify-between padding-container relative after:z-10 after:w-full after:h-full after:[transition:transform_150ms_ease,opacity_150ms_ease_75ms] after:bg-white after:absolute after:left-0 after:top-0 after:origin-[50%_0%] ` +
           (openSearchDropdown && "after:scale-y-[3] after:lg:scale-y-[2]")
         }
       >
@@ -56,7 +56,7 @@ const Header = () => {
         />
 
         {/* Move your home to Airbnb and Profile */}
-        <div className="min-w-fit flex-1 flex items-center justify-end z-10">
+        <div className="min-w-fit flex-1 flex items-center justify-end z-20">
           <div className="flex items-center mr-2">
             <Link to="/host/home" className="p-3 leading-[18px] text-center">
               Evinizi Airbnb'ye taşıyın!

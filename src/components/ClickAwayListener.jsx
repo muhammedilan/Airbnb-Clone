@@ -6,7 +6,7 @@ const ClickAwayListener = ({ children, onClickAway }) => {
   useEffect(() => {
     document.addEventListener(
       "click",
-      (e) => !wrapper.current.contains(e.target) && onClickAway()
+      (e) => !wrapper.current.contains(e.target) && onClickAway && onClickAway()
     );
   }, []);
 
