@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Banner from "./Banner";
@@ -8,6 +8,7 @@ import logoAndAirbnb from "../../assets/svgs/logo-and-airbnb.svg";
 import world from "../../assets/svgs/world.svg";
 import menu from "../../assets/svgs/menu.svg";
 import user from "../../assets/svgs/user.svg";
+
 import MobileHeader from "./MobileHeader";
 import Menu from "../Menu";
 import Search from "./Search";
