@@ -4,20 +4,19 @@ import { categories } from "../../data";
 const Categories = () => {
   const [sliderPage, setSliderPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(0);
-  const [sliderTranslateX, setSliderTranslateX] = useState();
 
   const slider = useRef();
   const prevButton = useRef();
   const nextButton = useRef();
 
-  function handleClickPrevButton() { // SLİDER HATALI ÇALIŞIYOR
+  function handleClickPrevButton() {
     const sliderWidth = slider.current.clientWidth;
-    const limit = sliderTranslateX + sliderWidth == 0;
+    const scrollLeft = slider.current.scrollLeft;
+    const limit = scrollLeft - sliderWidth * 2 <= 0;
 
-    setSliderTranslateX(sliderTranslateX + sliderWidth);
-    limit && prevButton.current.setAttribute("disabled", true);
-
+    slider.current.scrollTo(limit ? 0 : scrollLeft - sliderWidth, 0);
     setSliderPage(sliderPage - 1);
+    limit && prevButton.current.setAttribute("disabled", true);
   }
 
   function handleClickNextButton() {
@@ -25,26 +24,26 @@ const Categories = () => {
     const sliderScrollWidth = slider.current.scrollWidth;
     const limit = sliderWidth * sliderPage * 2 > sliderScrollWidth;
 
-    setSliderTranslateX(
-      -(limit ? sliderScrollWidth - sliderWidth : sliderWidth * sliderPage)
+    slider.current.scrollTo(
+      limit ? sliderScrollWidth - sliderWidth : sliderWidth * sliderPage,
+      0
     );
-    limit && nextButton.current.setAttribute("disabled", true);
-
     setSliderPage(sliderPage + 1);
+    limit && nextButton.current.setAttribute("disabled", true);
+    prevButton.current.classList.remove("opacity-0");
   }
 
   return (
-    <div className="flex gap-x-6 mt-5">
+    <div className="flex mt-5 gap-x-6">
       {/* Slider */}
-      {sliderTranslateX}
-      <div className="overflow-hidden relative">
+      <div className="grow overflow-hidden relative">
         <button
           ref={prevButton}
           onClick={() => {
             nextButton.current.removeAttribute("disabled");
             handleClickPrevButton();
           }}
-          className="h-full absolute flex items-center disabled:opacity-0 disabled:invisible after:w-10 after:h-full [background-image:linear-gradient(to_left,#ffffff00,#fff_40px)] duration-200 ease-[ease] transition-[opacity_visibilty_transform] z-10"
+          className="h-full absolute hidden md:flex items-center opacity-0 disabled:opacity-0 disabled:invisible after:w-10 after:h-full [background-image:linear-gradient(to_left,#ffffff00,#fff_40px)] duration-200 ease-[ease] transition-[opacity_visibilty_transform] z-10"
         >
           <div className="w-[28px] h-[28px] bg-white rounded-full hover:scale-[1.04] border-[.5px] border-[rgba(0,0,0,.3)] flex items-center justify-center">
             <img
@@ -56,19 +55,19 @@ const Categories = () => {
         </button>
 
         <div
+          className="h-[78px] overflow-x-scroll scroll-hidden snap-mandatory scroll-smooth flex whitespace-nowrap gap-x-8 duration-300"
           ref={slider}
-          className="h-[78px] flex gap-x-8 duration-500"
-          style={{ translate: sliderTranslateX }}
         >
           {categories.map((category, index) => {
             const selected = index == selectedCategory;
             return (
               <div
                 onClick={() => setSelectedCategory(index)}
-                className="py-1 m-[10px_0px_12px] flex-shrink-0 flex flex-col items-center rounded-md gap-y-2 relative group cursor-pointer"
+                className="py-1 m-[10px_0px_12px] flex flex-col items-center rounded-md gap-y-2 relative group cursor-pointer"
               >
                 <img
                   alt="Navigation"
+                  loading="lazy"
                   src={category.image}
                   data-selected={selected}
                   className="w-6 h-6 data-[selected=true]:opacity-100 group-hover:opacity-100 group-active:scale-[.96] opacity-[0.6425339366515838] duration-200 transition-[opacity_transform] ease-[ease]"
@@ -94,7 +93,7 @@ const Categories = () => {
             prevButton.current.removeAttribute("disabled");
             handleClickNextButton();
           }}
-          className="h-full absolute top-0 right-0 flex items-center disabled:opacity-0 disabled:invisible before:w-10 before:h-full [background-image:linear-gradient(to_right,#ffffff00,#fff_40px)] duration-200 ease-[ease] transition-[opacity_visibilty_transform]"
+          className="h-full absolute top-0 right-0 hidden md:flex items-center disabled:opacity-0 disabled:invisible before:w-10 before:h-full [background-image:linear-gradient(to_right,#ffffff00,#fff_40px)] duration-200 ease-[ease] transition-[opacity_visibilty_transform]"
         >
           <div className="w-[28px] h-[28px] bg-white rounded-full hover:scale-[1.04] border-[.5px] border-[rgba(0,0,0,.3)] flex items-center justify-center">
             <img

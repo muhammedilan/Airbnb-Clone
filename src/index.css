@@ -80,5 +80,9 @@ body {
 }
 
 .padding-container {
-  @apply px-10 2xl:px-20;
+  @apply px-6 md:px-10 2xl:px-20;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
 }

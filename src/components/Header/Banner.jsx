@@ -38,9 +38,9 @@ const Banner = () => {
           <div className="xl:w-1/2 p-[40px_160px] xl:p-[54px_30px_32px_40px] 2xl:p-[54px_32px_39px_52px] order-1 xl:-order-1 flex items-center justify-center">
             <div className="flex flex-col justify-center items-center text-center">
               <img
-                width={272}
-                src={require("../../assets/images/early-access.webp")}
+                src="https://a0.muscache.com/im/pictures/995cd7da-9315-4529-b1c8-ebe2b1a05d6b.jpg?im_q=highq&im_w=1200"
                 alt="Erken erişim"
+                width={272}
               />
               <h1 className="text-[2.5rem] xl:text-[3rem] 2xl:text-[3.75rem] mt-4 xl:mt-[30px] mb-[6px] xl:mb-4 font-extrabold tracking-[-0.03em] 2xl:tracking-[-0.02em] leading-10 xl:leading-[50px] 2xl:leading-[66px]">
                 Toplam fiyatı önceden görün
@@ -63,10 +63,10 @@ const Banner = () => {
           <picture className="xl:w-1/2">
             <source
               media="(max-width:1127px)"
-              srcSet={require("../../assets/images/airbnb-preview-mobile.webp")}
+              srcSet="https://a0.muscache.com/im/pictures/64150cc4-574d-408a-83c0-e28e63bc2219.jpg?im_w=720"
             />
             <img
-              src={require("../../assets/images/airbnb-preview-laptop.webp")}
+              src="https://a0.muscache.com/im/pictures/752d2d89-d04b-44b8-af31-d078d8c5dbbe.jpg?im_w=1200"
               alt="Airbnb Preview"
             />
           </picture>

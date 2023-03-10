@@ -1,82 +1,170 @@
 export const categories = [
   {
-    image: require("./assets/images/triangle-houses.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/1d477273-96d6-4819-9bda-9085f809dad3.jpg",
     title: "Üçgen evler",
   },
   {
-    image: require("./assets/images/rural.jpg"),
-    title: "Kırsal",
-  },
-  {
-    image: require("./assets/images/boats.jpg"),
-    title: "Tekneler",
-  },
-  {
-    image: require("./assets/images/castles.jpg"),
-    title: "Şatolar",
-  },
-  {
-    image: require("./assets/images/ufo.jpg"),
-    title: "Olağanüstü",
-  },
-  {
-    image: require("./assets/images/next-to-sea-shore.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg",
     title: "Denize sıfır",
   },
   {
-    image: require("./assets/images/private-rooms.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg",
+    title: "Kırsal",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/687a8682-68b3-4f21-8d71-3c3aef6c1110.jpg",
+    title: "Tekneler",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg",
+    title: "Şatolar",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg",
+    title: "Olağanüstü",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/eb7ba4c0-ea38-4cbb-9db6-bdcc8baad585.jpg",
     title: "Özel odalar",
   },
   {
-    image: require("./assets/images/beautiful-landscapes.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg",
     title: "Güzel manzalar",
   },
   {
-    image: require("./assets/images/tiny-houses.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/35919456-df89-4024-ad50-5fcb7a472df9.jpg",
     title: "Küçük evler",
   },
   {
-    image: require("./assets/images/mansions.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg",
     title: "Malikâneler",
   },
   {
-    image: require("./assets/images/popular.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg",
     title: "Popüler",
   },
   {
-    image: require("./assets/images/huts.jpg"),
-    title: "Kulubeler",
+    image:
+      "https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg",
+    title: "Kulübeler",
   },
   {
-    image: require("./assets/images/luxe.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg",
     title: "Luxe",
   },
   {
-    image: require("./assets/images/amazing-pools.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg",
     title: "Muhteşem havuzlar",
   },
   {
-    image: require("./assets/images/iconic-cities.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg",
     title: "Simgesel Kentler",
   },
   {
-    image: require("./assets/images/surf.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/957f8022-dfd7-426c-99fd-77ed792f6d7a.jpg",
     title: "Sörf",
   },
   {
-    image: require("./assets/images/lakeside.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg",
     title: "Göl kenarı",
   },
   {
-    image: require("./assets/images/domes.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/89faf9ae-bbbc-4bc4-aecd-cc15bf36cbca.jpg",
     title: "Kubbeler",
   },
   {
-    image: require("./assets/images/farms.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg",
     title: "Çiftlikler",
   },
   {
-    image: require("./assets/images/historical-houses.jpg"),
+    image:
+      "https://a0.muscache.com/pictures/33dd714a-7b4a-4654-aaf0-f58ea887a688.jpg",
     title: "Tarihi evler",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/5ed8f7c7-2e1f-43a8-9a39-4edfc81a3325.jpg",
+    title: "Oda-kahvaltılar",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg",
+    title: "Yeni",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/50861fca-582c-4bcc-89d3-857fb7ca6528.jpg",
+    title: "Tasarım",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg",
+    title: "Kuzey Kutbu",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/ee9e2a40-ffac-4db9-9080-b351efc3cfc4.jpg",
+    title: "Tropik",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg",
+    title: "Golf",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg",
+    title: "Mağaralar",
+  },
+  {
+    image:
+      "https://a0.muscache.com/pictures/d7445031-62c4-46d0-91c3-4f29f9790f7a.jpg",
+    title: "Toprak evler",
+  },
+];
+
+export const products = [
+  {
+    title: "Muratpaşa",
+    image:
+      "https://a0.muscache.com/im/pictures/miso/Hosting-795487932530451641/original/8cd9f663-5636-4e67-8c6c-53cc4087c11f.jpeg?im_w=720",
+    address: "Lara Plajı",
+    dayRange: "10 - 15",
+    day: "Mart",
+    price: 39.103,
+    time: "gece",
+    country: "Türkiye",
+    new: true,
+  },
+  {
+    title: "Çeşme",
+    image:
+      "https://a0.muscache.com/im/pictures/706cfa5e-0e7b-4f5d-aa89-8011195f3bfc.jpg?im_w=720",
+    address: "466 kilometre uzakta",
+    day: "Mart",
+    dayRange: "12 - 17",
+    price: 1165,
+    time: "gece",
+    starRate: "4,54",
+    country: "Türkiye",
+    new: true,
   },
 ];
