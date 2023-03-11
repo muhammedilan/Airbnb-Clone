@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import Slider from "./Slider";
 
 const Product = (props) => {
+  const [page, setPage] = useState(1);
+
   const {
     title,
-    image,
+    images,
     country,
     starRate,
     address,
@@ -15,10 +18,32 @@ const Product = (props) => {
 
   return (
     <div className="relative flex flex-col cursor-pointer">
-      <img src={image} alt="housing" className="flex-1  object-cover rounded-xl" />
+      <div className="relative rounded-xl overflow-hidden">
+        <Slider page={page} setPage={setPage}>
+          {images.map((image) => (
+            <img
+              src={image}
+              alt="housing"
+              className="grow aspect-[20/19] object-cover"
+            />
+          ))}
+        </Slider>
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-x-[5px]">
+          {[...Array(5).keys()].map((key) => (
+            <span
+              data-selected={page == key + 1}
+              className="w-[6px] h-[6px] bg-white opacity-[.6] data-[selected=true]:opacity-100 rounded-full"
+            />
+          ))}
+        </div>
+      </div>
 
-      <button className="w-6 h-6 absolute top-4 right-4">
-        <img src={require("../assets/svgs/heart.svg").default} alt="Heart" />
+      <button className="w-6 h-6 absolute top-4 right-4 active:scale-[.92]">
+        <img
+          src={require("../assets/svgs/heart.svg").default}
+          loading="eager"
+          alt="Heart"
+        />
       </button>
 
       <div className="grid grid-cols-[minmax(0,1fr),max-content] gap-[2px_8px] mt-3 text-[.9375rem] leading-[19px]">

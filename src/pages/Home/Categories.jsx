@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { categories } from "../../data";
+import { ReactComponent as ArrowRight } from "../../assets/svgs/arrow-right.svg";
 
 const Categories = () => {
+  // yapılmalı
   const [sliderPage, setSliderPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(0);
 
@@ -12,7 +14,7 @@ const Categories = () => {
   function handleClickPrevButton() {
     const sliderWidth = slider.current.clientWidth;
     const scrollLeft = slider.current.scrollLeft;
-    const limit = scrollLeft - sliderWidth * 2 <= 0;
+    const limit = sliderPage == 2;
 
     slider.current.scrollTo(limit ? 0 : scrollLeft - sliderWidth, 0);
     setSliderPage(sliderPage - 1);
@@ -46,16 +48,17 @@ const Categories = () => {
           className="h-full absolute hidden md:flex items-center opacity-0 disabled:opacity-0 disabled:invisible after:w-10 after:h-full [background-image:linear-gradient(to_left,#ffffff00,#fff_40px)] duration-200 ease-[ease] transition-[opacity_visibilty_transform] z-10"
         >
           <div className="w-[28px] h-[28px] bg-white rounded-full hover:scale-[1.04] border-[.5px] border-[rgba(0,0,0,.3)] flex items-center justify-center">
-            <img
-              src={require("../../assets/svgs/arrow-right.svg").default}
-              className="w-3 h-3"
-              alt="Arrow Left"
+            <ArrowRight
+              width="12"
+              height="12"
+              strokeWidth="5.33333px"
+              className="rotate-180"
             />
           </div>
         </button>
 
         <div
-          className="h-[78px] overflow-x-scroll scroll-hidden snap-mandatory scroll-smooth flex whitespace-nowrap gap-x-8 duration-300"
+          className="h-[78px] overflow-x-scroll scroll-hidden snap-mandatory flex whitespace-nowrap gap-x-8 duration-300"
           ref={slider}
         >
           {categories.map((category, index) => {
@@ -96,11 +99,7 @@ const Categories = () => {
           className="h-full absolute top-0 right-0 hidden md:flex items-center disabled:opacity-0 disabled:invisible before:w-10 before:h-full [background-image:linear-gradient(to_right,#ffffff00,#fff_40px)] duration-200 ease-[ease] transition-[opacity_visibilty_transform]"
         >
           <div className="w-[28px] h-[28px] bg-white rounded-full hover:scale-[1.04] border-[.5px] border-[rgba(0,0,0,.3)] flex items-center justify-center">
-            <img
-              src={require("../../assets/svgs/arrow-right.svg").default}
-              className="w-3 h-3 rotate-180"
-              alt="Arrow Right"
-            />
+            <ArrowRight width="12" height="12" strokeWidth="5.33333px" />
           </div>
         </button>
       </div>

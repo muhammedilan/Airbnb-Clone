@@ -15,6 +15,7 @@ module.exports = {
         xl: "1128px",
         "2xl": "1440px",
         "3xl": "1640px",
+        "4xl": "1880px",
       },
       borderRadius: {
         sm: "4px",

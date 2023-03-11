@@ -41,7 +41,7 @@ const Header = () => {
       >
         {/* Logo */}
         <Link
-          className="min-w-fit h-16 flex items-center flex-1 cursor-pointer z-20"
+          className="h-16 flex items-center cursor-pointer z-20 flex-shrink-0"
           to="/"
         >
           <picture>
@@ -57,7 +57,7 @@ const Header = () => {
         />
 
         {/* Move your home to Airbnb and Profile */}
-        <div className="min-w-fit flex-1 flex items-center justify-end z-20">
+        <div className="h-full flex items-center justify-end z-20 flex-shrink-0">
           <div className="flex items-center mr-2">
             <Link to="/host/home" className="p-3 leading-[18px] text-center">
               Evinizi Airbnb'ye taşıyın!
@@ -101,7 +101,7 @@ const Header = () => {
         </div>
       </header>
 
-      <MobileHeader />
+      {/* <MobileHeader /> */}
     </>
   );
 };

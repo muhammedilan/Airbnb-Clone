@@ -143,28 +143,21 @@ export const categories = [
 
 export const products = [
   {
-    title: "Muratpaşa",
-    image:
-      "https://a0.muscache.com/im/pictures/miso/Hosting-795487932530451641/original/8cd9f663-5636-4e67-8c6c-53cc4087c11f.jpeg?im_w=720",
-    address: "Lara Plajı",
-    dayRange: "10 - 15",
+    title: "Rače",
+    images: [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-725618445959793719/original/708605de-376a-42b3-b84a-d66c88e7d246.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-725618445959793719/original/ed829353-a811-407c-bf68-81d1e5941c61.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-725618445959793719/original/cbeb2428-6644-4ca5-b828-71039af52e5d.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-725618445959793719/original/360ff283-f749-47d5-8a33-ddbb782a8273.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-725618445959793719/original/2d6c84f8-6e1e-487f-a2e4-0d4203562848.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-725618445959793719/original/6fa22714-7d60-45b2-b7d0-38de7b4306b1.jpeg?im_w=720",
+    ],
+    address: "Tırmanma duvarı",
+    dayRange: "20 - 25",
     day: "Mart",
-    price: 39.103,
+    price: 972,
     time: "gece",
-    country: "Türkiye",
-    new: true,
-  },
-  {
-    title: "Çeşme",
-    image:
-      "https://a0.muscache.com/im/pictures/706cfa5e-0e7b-4f5d-aa89-8011195f3bfc.jpg?im_w=720",
-    address: "466 kilometre uzakta",
-    day: "Mart",
-    dayRange: "12 - 17",
-    price: 1165,
-    time: "gece",
-    starRate: "4,54",
-    country: "Türkiye",
-    new: true,
+    country: "Slovenya",
+    starRate: "5,0",
   },
 ];
