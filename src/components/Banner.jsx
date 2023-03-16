@@ -1,18 +1,15 @@
-import React, { memo, useState } from "react";
-import close from "../../assets/svgs/close.svg";
+import React, { useState } from "react";
+import { ReactComponent as Close } from "../assets/svgs/close.svg";
 
 const Banner = () => {
   const [open, setOpen] = useState(false);
-  function toggleOpen() {
-    setOpen(!open);
-  }
 
   return (
-    <div className="hidden md:block bg-[#f7f7f7] shadow-[inset_0px_-1px_0px_rgba(0,0,0,0.06)] relative z-30 padding-container">
+    <div className="hidden md:block bg-[#f7f7f7] shadow-[inset_0px_-1px_0px_rgba(0,0,0,0.06)] padding-container z-30">
       <div className="h-16 flex items-center justify-center text-center text-[1rem] font-semibold">
         Toplam fiyatı önceden göster
         <button
-          onClick={() => toggleOpen()}
+          onClick={() => setOpen(true)}
           className="p-2 underline active:scale-[0.94]"
         >
           <span>Daha fazla bilgi edinin</span>
@@ -22,17 +19,16 @@ const Banner = () => {
       {/* Popup */}
       <div
         className={
-          "w-screen h-screen bg-black bg-opacity-60 absolute left-0 top-0 md:flex items-center justify-center transition-[opacity] duration-400 " +
-          (open ? "opacity-100 z-20" : "opacity-0 invisible")
+          "w-full h-full bg-black bg-opacity-60 absolute left-0 top-0 md:flex items-center justify-center transition-[opacity] duration-400 " +
+          (open ? "opacity-100" : "opacity-0 invisible")
         }
       >
         <div className="flex flex-col xl:flex-row h-[742px] max-w-[696px] xl:h-[543.08px] 2xl:h-[645.95px] xl:min-w-[908px] 2xl:min-w-[1080px] bg-white rounded-xl relative overflow-hidden">
-          {/* Close Icon */}
           <button
-            onClick={() => toggleOpen()}
+            onClick={() => setOpen(false)}
             className="w-8 h-8 flex items-center justify-center absolute top-4 left-4"
           >
-            <img width={16} height={16} src={close} alt="Close" />
+            <Close />
           </button>
 
           <div className="xl:w-1/2 p-[40px_160px] xl:p-[54px_30px_32px_40px] 2xl:p-[54px_32px_39px_52px] order-1 xl:-order-1 flex items-center justify-center">
@@ -76,4 +72,4 @@ const Banner = () => {
   );
 };
 
-export default memo(Banner);
+export default Banner;

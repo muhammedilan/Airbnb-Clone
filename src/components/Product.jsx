@@ -4,34 +4,27 @@ import Slider from "./Slider";
 const Product = (props) => {
   const [page, setPage] = useState(1);
 
-  const {
-    title,
-    images,
-    country,
-    starRate,
-    address,
-    dayRange,
-    day,
-    price,
-    time,
-  } = props;
+  const { title, images, country, starRate, address, dayRange, price, time } =
+    props;
 
   return (
     <div className="relative flex flex-col cursor-pointer">
       <div className="relative rounded-xl overflow-hidden">
         <Slider page={page} setPage={setPage}>
-          {images.map((image) => (
+          {images.map((image, index) => (
             <img
+              key={index}
               src={image}
               alt="housing"
-              className="grow aspect-[20/19] object-cover"
+              className="aspect-[20/19] object-cover"
             />
           ))}
         </Slider>
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-x-[5px]">
-          {[...Array(5).keys()].map((key) => (
+          {[...Array(5).keys()].map((key, index) => (
             <span
-              data-selected={page == key + 1}
+              key={index}
+              data-selected={page === key + 1}
               className="w-[6px] h-[6px] bg-white opacity-[.6] data-[selected=true]:opacity-100 rounded-full"
             />
           ))}
@@ -50,14 +43,14 @@ const Product = (props) => {
         <div className="font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
           {title}, {country}
         </div>
-        <div className="flex items-center gap-x-1">
-          <img src={require("../assets/svgs/star.svg").default} alt="Star" />
-          {starRate || "Yeni"}
-        </div>
+        {starRate && (
+          <div className="flex items-center gap-x-1">
+            <img src={require("../assets/svgs/star.svg").default} alt="Star" />
+            {starRate}
+          </div>
+        )}
         <div className="text-[#717171] col-span-2">{address}</div>
-        <div className="text-[#717171] col-span-2">
-          {dayRange} {day.slice(0, 3)}
-        </div>
+        <div className="text-[#717171] col-span-2">{dayRange}</div>
         <div className="mt-[6px] col-span-2">
           <span className="font-semibold">{price} ₺</span> {time}
         </div>

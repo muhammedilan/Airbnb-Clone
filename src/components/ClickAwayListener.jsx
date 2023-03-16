@@ -4,10 +4,10 @@ const ClickAwayListener = ({ children, onClickAway }) => {
   const wrapper = useRef();
 
   useEffect(() => {
-    document.addEventListener(
-      "click",
-      (e) => !wrapper.current.contains(e.target) && onClickAway && onClickAway()
-    );
+    function handleClick(e) {
+      !wrapper.current.contains(e.target) && onClickAway && onClickAway();
+    }
+    document.addEventListener("click", handleClick);
   }, []);
 
   return (

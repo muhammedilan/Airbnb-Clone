@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { categories } from "../../data";
 import { ReactComponent as ArrowRight } from "../../assets/svgs/arrow-right.svg";
 
 const Categories = () => {
-  // yapılmalı
   const [sliderPage, setSliderPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(0);
 
@@ -14,7 +13,7 @@ const Categories = () => {
   function handleClickPrevButton() {
     const sliderWidth = slider.current.clientWidth;
     const scrollLeft = slider.current.scrollLeft;
-    const limit = sliderPage == 2;
+    const limit = sliderPage === 2;
 
     slider.current.scrollTo(limit ? 0 : scrollLeft - sliderWidth, 0);
     setSliderPage(sliderPage - 1);
@@ -36,7 +35,7 @@ const Categories = () => {
   }
 
   return (
-    <div className="flex mt-5 gap-x-6">
+    <div className="sticky bg-white top-[68px] md:top-20 md:mt-5 flex gap-x-6 z-10 shadow-[0_0_6px_#00000029] padding-container">
       {/* Slider */}
       <div className="grow overflow-hidden relative">
         <button
@@ -58,15 +57,16 @@ const Categories = () => {
         </button>
 
         <div
-          className="h-[78px] overflow-x-scroll scroll-hidden snap-mandatory flex whitespace-nowrap gap-x-8 duration-300"
+          className="overflow-x-scroll scroll-hidden snap-mandatory flex whitespace-nowrap gap-x-8 duration-300"
           ref={slider}
         >
           {categories.map((category, index) => {
-            const selected = index == selectedCategory;
+            const selected = index === selectedCategory;
             return (
               <div
+                key={index}
                 onClick={() => setSelectedCategory(index)}
-                className="py-1 m-[10px_0px_12px] flex flex-col items-center rounded-md gap-y-2 relative group cursor-pointer"
+                className="py-1 mt-3 mb-[10px] flex flex-col items-center rounded-md gap-y-1 md:gap-y-2 relative group cursor-pointer"
               >
                 <img
                   alt="Navigation"
@@ -105,7 +105,7 @@ const Categories = () => {
       </div>
 
       {/* Filters */}
-      <div className="flex items-center justify-end flex-shrink-0">
+      <div className="hidden md:flex items-center justify-end flex-shrink-0">
         <button className="h-12 px-4 py-[7px] text-[.75rem] font-semibold flex items-center gap-x-2 border border-light-grey rounded-xl">
           <img
             src={require("../../assets/svgs/filters.svg").default}
