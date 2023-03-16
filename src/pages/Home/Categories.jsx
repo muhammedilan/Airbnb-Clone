@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { categories } from "../../data";
+
 import { ReactComponent as ArrowRight } from "../../assets/svgs/arrow-right.svg";
+import { ReactComponent as Filter } from "../../assets/svgs/filter.svg";
 
 const Categories = () => {
   const [sliderPage, setSliderPage] = useState(1);
@@ -107,10 +109,7 @@ const Categories = () => {
       {/* Filters */}
       <div className="hidden md:flex items-center justify-end flex-shrink-0">
         <button className="h-12 px-4 py-[7px] text-[.75rem] font-semibold flex items-center gap-x-2 border border-light-grey rounded-xl">
-          <img
-            src={require("../../assets/svgs/filters.svg").default}
-            alt="Filters"
-          />
+          <Filter width={14} height={14} />
           Filtreler
         </button>
       </div>

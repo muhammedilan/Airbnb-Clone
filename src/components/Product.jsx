@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Slider from "./Slider";
 
+import { ReactComponent as Heart } from "../assets/svgs/heart.svg";
+import { ReactComponent as Star } from "../assets/svgs/star.svg";
+
 const Product = (props) => {
   const [page, setPage] = useState(1);
 
@@ -32,11 +35,7 @@ const Product = (props) => {
       </div>
 
       <button className="w-6 h-6 absolute top-4 right-4 active:scale-[.92]">
-        <img
-          src={require("../assets/svgs/heart.svg").default}
-          loading="eager"
-          alt="Heart"
-        />
+        <Heart />
       </button>
 
       <div className="grid grid-cols-[minmax(0,1fr),max-content] gap-[2px_8px] mt-3 text-[.9375rem] leading-[19px]">
@@ -45,7 +44,7 @@ const Product = (props) => {
         </div>
         {starRate && (
           <div className="flex items-center gap-x-1">
-            <img src={require("../assets/svgs/star.svg").default} alt="Star" />
+            <Star />
             {starRate}
           </div>
         )}
