@@ -21,7 +21,7 @@ const Slider = ({ children, className }) => {
         slider.current.scrollLeft / slider.current.clientWidth
       ).toFixed();
 
-      currentPage == 0 && (slider.current.scrollLeft = 0);
+      currentPage === 0 && (slider.current.scrollLeft = 0);
       setPage(parseInt(currentPage));
     }, 400);
   }
@@ -30,16 +30,21 @@ const Slider = ({ children, className }) => {
     slider.current.scrollLeft = slider.current.clientWidth * page;
   }, [width, page]);
 
+  function toggleVisibiltyOfButtons() {
+    nextButton.current.classList.toggle("hidden");
+    prevButton.current.classList.toggle("hidden");
+  }
+
   return (
     <div
       className="relative"
-      onMouseLeave={() => nextButton.current.classList.add("hidden")}
-      onMouseEnter={() => nextButton.current.classList.remove("hidden")}
+      onMouseEnter={toggleVisibiltyOfButtons}
+      onMouseLeave={toggleVisibiltyOfButtons}
     >
       <button
         className="w-8 h-8 bg-[rgba(255,255,255,.9)] hidden disabled:hidden flex items-center justify-center rounded-full absolute left-3 top-1/2 -translate-y-1/2 hover:scale-[1.04] hover:bg-white border border-[rgba(0,0,0,.08)] shadow-[0_0_0_1px_transparent,0_0_0_4px_transparent,0_2px_4px_#0000002e]"
         onClick={() => setPage(page - 1)}
-        disabled={page == 0}
+        disabled={page === 0}
         ref={prevButton}
       >
         <ArrowRight strokeWidth={4} className="rotate-180" />
@@ -55,11 +60,8 @@ const Slider = ({ children, className }) => {
       </div>
       <button
         className="w-8 h-8 bg-[rgba(255,255,255,.9)] hidden disabled:hidden flex items-center justify-center rounded-full absolute right-3 top-1/2 -translate-y-1/2 hover:scale-[1.04] hover:bg-white border border-[rgba(0,0,0,.08)] shadow-[0_0_0_1px_transparent,0_0_0_4px_transparent,0_2px_4px_#0000002e]"
-        onClick={() => {
-          prevButton.current.classList.remove("hidden");
-          setPage(page + 1);
-        }}
-        disabled={page == nextLimit}
+        onClick={() => setPage(page + 1)}
+        disabled={page === nextLimit}
         ref={nextButton}
       >
         <ArrowRight strokeWidth={4} />
