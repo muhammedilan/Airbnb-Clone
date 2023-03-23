@@ -19,7 +19,7 @@ const Product = (props) => {
               key={index}
               src={image}
               alt="housing"
-              className="aspect-[20/19] object-cover"
+              className="w-full aspect-[20/19] object-cover"
             />
           ))}
         </Slider>

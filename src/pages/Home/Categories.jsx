@@ -65,27 +65,29 @@ const Categories = () => {
           {categories.map((category, index) => {
             const selected = index === selectedCategory;
             return (
-              <div
-                key={index}
-                onClick={() => setSelectedCategory(index)}
-                className="py-1 mt-3 mb-[10px] flex flex-col items-center rounded-md gap-y-1 md:gap-y-2 relative group cursor-pointer"
-              >
-                <img
-                  alt="Navigation"
-                  loading="lazy"
-                  src={category.image}
-                  data-selected={selected}
-                  className="w-6 h-6 data-[selected=true]:opacity-100 group-hover:opacity-100 group-active:scale-[.96] opacity-[0.6425339366515838] duration-200 transition-[opacity_transform] ease-[ease]"
-                />
+              <div className="relative">
                 <div
-                  data-selected={selected}
-                  className="text-[.75rem] text-[#717171] data-[selected=true]:text-black group-hover:text-black group-active:scale-[.96] group-active:translate-y-[-1px] duration-200 transition-[color_transform] ease-[ease]"
+                  key={index}
+                  onClick={() => setSelectedCategory(index)}
+                  className="py-1 mt-3 mb-[10px] flex flex-col items-center rounded-md gap-y-1 md:gap-y-2 relative group cursor-pointer"
                 >
-                  {category.title}
+                  <img
+                    alt="Navigation"
+                    loading="lazy"
+                    src={category.image}
+                    data-selected={selected}
+                    className="w-6 h-6 data-[selected=true]:opacity-100 group-hover:opacity-100 group-active:scale-[.96] opacity-[0.6425339366515838] duration-200 transition-[opacity_transform] ease-[ease]"
+                  />
+                  <div
+                    data-selected={selected}
+                    className="text-[.75rem] text-[#717171] data-[selected=true]:text-black group-hover:text-black group-active:scale-[.96] group-active:translate-y-[-1px] duration-200 transition-[color_transform] ease-[ease]"
+                  >
+                    {category.title}
+                  </div>
                 </div>
                 <div
                   data-selected={selected}
-                  className="w-full h-[2px] bg-light-grey absolute left-0 -bottom-3 hidden group-hover:block data-[selected=true]:bg-black data-[selected=true]:block"
+                  className="w-full h-[2px] bg-light-grey absolute left-0 bottom-0 hidden group-hover:block data-[selected=true]:bg-black data-[selected=true]:block"
                 />
               </div>
             );

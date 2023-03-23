@@ -17,18 +17,22 @@ const Slider = ({ children, className }) => {
   function handleWheel() {
     timeout !== null && clearTimeout(timeout);
     timeout = setTimeout(() => {
-      const currentPage = (
-        slider.current.scrollLeft / slider.current.clientWidth
-      ).toFixed();
+      const currentPage = parseInt(
+        (slider.current.scrollLeft / slider.current.clientWidth).toFixed()
+      );
 
       currentPage === 0 && (slider.current.scrollLeft = 0);
-      setPage(parseInt(currentPage));
+      currentPage === page ? slidePlacer() : setPage(parseInt(currentPage));
     }, 400);
   }
 
-  useEffect(() => {
+  function slidePlacer() {
     slider.current.scrollLeft = slider.current.clientWidth * page;
-  }, [width, page]);
+  }
+
+  useEffect(() => {
+    slidePlacer();
+  }, [page, width]);
 
   function toggleVisibiltyOfButtons() {
     nextButton.current.classList.toggle("hidden");
@@ -51,7 +55,7 @@ const Slider = ({ children, className }) => {
       </button>
       <div
         ref={slider}
-        onWheel={handleWheel}
+        onScroll={handleWheel}
         className={
           `flex overflow-x-scroll scroll-hidden whitespace-nowrap ` + className
         }
