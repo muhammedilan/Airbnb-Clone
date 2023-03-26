@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   const { width } = useWindowSize();
 
   return (
-    <div className="min-h-[200vh] flex flex-col">
+    <div className="mx-auto max-w-[2520px] min-h-[200vh] flex flex-col">
       {width < 744 ? (
         <MobileHeader />
       ) : (
