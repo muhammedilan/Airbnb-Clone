@@ -176,7 +176,6 @@ export const products = [
     title: "Mesa County",
     subtitle: "Geçen hafta 6.601 kez görüntülendi",
     images: [
-      "https://a0.muscache.com/im/pictures/f192135e-4df8-4d86-9cda-8e4c72fc5d93.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/38920ae7-dbbf-4012-a222-5990dbc73dc9.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/2476f261-7505-468e-bd16-438087b83e04.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/442171aa-c5cf-402d-a4e5-689a6e4da754.jpg?im_w=720",
