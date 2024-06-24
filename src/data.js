@@ -176,10 +176,8 @@ export const products = [
     title: "Mesa County",
     subtitle: "Geçen hafta 6.601 kez görüntülendi",
     images: [
-      "https://a0.muscache.com/im/pictures/38920ae7-dbbf-4012-a222-5990dbc73dc9.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/2476f261-7505-468e-bd16-438087b83e04.jpg?im_w=720",
       "https://a0.muscache.com/im/pictures/442171aa-c5cf-402d-a4e5-689a6e4da754.jpg?im_w=720",
-      "https://a0.muscache.com/im/pictures/miso/Hosting-50165906/original/2b1ded61-ff49-45a9-b131-29642ddca1a5.jpeg?im_w=720",
     ],
     dayRange: "16 - 21 Mar",
     price: "7367",
