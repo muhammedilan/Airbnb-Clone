@@ -19,7 +19,7 @@ const Banner = () => {
       {/* Popup */}
       <div
         className={
-          "w-full h-full bg-black bg-opacity-60 absolute left-0 top-0 md:flex items-center justify-center transition-[opacity] duration-400 " +
+          "w-full h-full bg-black bg-opacity-60 fixed left-0 top-0 md:flex items-center justify-center transition-[opacity] duration-400 " +
           (open ? "opacity-100" : "opacity-0 invisible")
         }
       >
