@@ -21,8 +21,8 @@ https://airbnb-clone-muhammedilan-team.vercel.app
 &nbsp;
 ## Ekran Görüntüleri
 
-![Homepage](https://res.cloudinary.com/dd5hzgg9i/image/upload/v1746873828/airbnb-clone_zijiim.png)
-![Mobile homepage](https://res.cloudinary.com/dd5hzgg9i/image/upload/v1746873892/airbnb-clone-mobile_ccdvne.png)
+![Homepage](https://github.com/user-attachments/assets/23954f58-d42e-48cc-8353-5a4d17183533)
+![Mobile homepage](https://github.com/user-attachments/assets/9fcd75b9-0fe7-4163-8f15-a9e28de6eca9)
 
 &nbsp;
 ## Bilgisayarınızda Çalıştırın
